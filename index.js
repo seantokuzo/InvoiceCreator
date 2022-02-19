@@ -72,7 +72,7 @@ function removeService(e) {
 }
 
 function addService(taskObj) {
-    if (selectedTasks.length < 11) {
+    if (selectedTasks.length < 11 && !selectedTasks.includes(taskObj)) {
         selectedTasks.push(taskObj)
         renderTasksList()
     } else return
