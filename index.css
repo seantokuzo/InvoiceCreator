@@ -28,8 +28,7 @@ body {
 }
 
 main {
-    /* width: 100%; */
-    /* margin: 0 auto; */
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,7 +45,12 @@ header {
     text-align: center;
     
     background-color: var(--invoice-button-dark);
+}
 
+@media (max-width: 720px) {
+    #header-div {
+        padding: 5px 20px;
+    }
 }
 
 header h1 {
@@ -54,8 +58,13 @@ header h1 {
     font-size: 40px;
     
     text-align: center;
-    
-    margin: 30px 0 0;;
+}
+
+@media (max-width: 720px) {
+    header h1 {
+        font-size: 30px;
+        margin: 10px 0 0;
+    }
 }
 
 header h4 {
@@ -65,15 +74,30 @@ header h4 {
     margin: 20px 0 0;
 }
 
+@media (max-width: 720px) {
+    header h4 {
+        font-size: 13px;
+        font-weight: 400;
+        margin: 5px 0 0;
+    }
+}
+
 header p {
     font-size: 12px;
     
     margin: 10px 0 0;
-    
+}
+
+@media (max-width: 720px) {
+    header p {
+        font-size: 10px;
+        font-weight: 400;
+        margin: 5px 0;
+    }
 }
 
 #grid-div {
-    /* max-width: 700px; */
+    max-width: 700px;
     /* margin: 0 auto; */
 }
 
@@ -85,6 +109,12 @@ header p {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto-fill, minmax(1fr, 45px));
     grid-gap: 30px;
+}
+
+@media (max-width: 720px) {
+    #services-div {
+        grid-gap: 10px;
+    }
 }
 
 .service-button {
@@ -106,9 +136,11 @@ header p {
     border-radius: 7px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 720px) {
     .service-button {
         font-size: 10px;
+        font-weight: 700;
+        padding: 10px 5px;
     }
 }
 
@@ -119,6 +151,12 @@ header p {
 #tasks-title-div {
     display: grid;
     align-items: center;
+}
+
+@media (max-width: 720px) {
+    #tasks-title-div {
+        padding: 0 15px;
+    }
 }
 
 #task-title {
@@ -140,11 +178,25 @@ header p {
     border-bottom: 1px solid var(--page-break);
 }
 
+@media (max-width: 720px) {
+    #tasks-div {
+        padding: 0 15px;
+        min-height: 70px;
+    }
+}
+
 .added-task-div {
     grid-column: 1 / -1;
 
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 720px) {
+    .added-task-div {
+        margin: 0;
+        max-height: 33px;
+    }
 }
 
 .added-task-title {
@@ -155,6 +207,12 @@ header p {
     color: var(--solid-text-dark);
 }
 
+@media (max-width: 720px) {
+    .added-task-title {
+        font-size: 14px;
+    }
+}
+
 .added-task-remove {
     font-size: 8px;
     line-height: 20px;
@@ -162,6 +220,12 @@ header p {
     color: var(--grey-text-dark);
 
     margin-left: 20px;
+}
+
+@media (max-width: 720px) {
+    .added-task-remove {
+        margin-left: 30px;
+    }
 }
 
 .added-task-remove:hover {
@@ -178,6 +242,12 @@ header p {
     margin-left: auto;
 }
 
+@media (max-width: 720px) {
+    .dollar {
+        font-size: 16px;
+    }
+}
+
 .price {
     font-weight: 500;
     font-size: 24px;
@@ -186,12 +256,10 @@ header p {
     color: var(--solid-text-dark);
 }
 
-.body-text {
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 20px;
-    
-    color: var(--grey-text-dark);
+@media (max-width: 720px) {
+    .price {
+        font-size: 16px;
+    }
 }
 
 #notes-total-div {
@@ -203,6 +271,20 @@ header p {
     margin: 20px 0 0;
     
     /* border: 1px solid red; */
+}
+
+@media (max-width: 720px) {
+    #notes-total-div {
+        grid-template-rows: .5fr 1.5fr auto auto;
+        grid-row-gap: 10px;
+    }
+}
+
+@media (max-width: 720px) {
+    #notes-total-div {
+        padding: 0 15px;
+        margin: 10px 0 0;
+    }
 }
 
 #notes-title {
@@ -239,6 +321,13 @@ header p {
     /* border: 1px solid green; */
 }
 
+@media (max-width: 720px) {
+    #total-title {
+        min-width: 100px;
+        margin: 0;
+    }
+}
+
 #amount {
     min-height: 0px;
     grid-column: 5 / 6;
@@ -249,6 +338,26 @@ header p {
     margin: 0;
 
     /* border: 1px solid red; */
+}
+
+@media (max-width: 720px) {
+    #amount {
+        font-size: 20px;
+    }
+}
+
+.body-text {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    
+    color: var(--grey-text-dark);
+}
+
+@media (max-width: 720px) {
+    .body-text {
+        font-size: 12px;
+    }
 }
 
 #notes-input {
@@ -280,6 +389,12 @@ header p {
     margin: 10px 0 0;
 }
 
+@media (max-width: 720px) {
+    #invoice-button {
+        height: auto;
+    }
+}
+
 .fa-envelope {
     margin-right: 10px;
 }
@@ -296,6 +411,14 @@ textarea {
     resize: none;
     border-radius: 5px;
     padding: 2px 5px;
+}
+
+@media (max-width: 720px) {
+    textarea {
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
 }
 
 ul {
