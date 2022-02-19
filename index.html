@@ -14,38 +14,34 @@
 
 <body>
     <header>
-        <h1>Invoice Creator</h1>
-        <h4>Thanks for choosing IchiBuho, LLC</h4>
-        <p>a family company </p>
-        <!-- <i class="fa-solid fa-family"></i> -->
+        <div id="header-div">
+            <h1>Invoice Creator</h1>
+            <h4>Thanks for choosing IchiBuho, LLC</h4>
+            <p>a family company </p>
+            <!-- <i class="fa-solid fa-family"></i> -->
+        </div>
     </header>
     <main>
         <div id="grid-div">
-            <section>
-                <div id="services-div">
-                </div>
-            </section>
-            <section>
-                <div id="tasks-title-div">
-                    <h3 class="body-text" id="task-title">TASK</h3>
-                    <h3 class="body-text" id="total-title">TOTAL</h3>
-                </div>
-                <div id="tasks-div">
-                </div>
-            </section>
-            <section>
-                <div id="notes-total-div">
-                    <h3 id="notes-title" class="body-text">NOTES</h3>
-                    <p id="notes"></p>
-                    <h3 id="total-title" class="body-text align-right">TOTAL AMOUNT</h3>
-                    <h1 id="amount" class="align-right">$0</h1>
-                    <textarea type="text" id="notes-input" maxlength="300" placeholder="Add notes here"></textarea>
-                    <button type="button" id="invoice-button" onclick="resetAll()">
-                        <i class="fa-solid fa-envelope"></i>
-                        Send Invoice
-                    </button>
-                </div>
-            </section>
+            <div id="services-div">
+            </div>
+            <div id="tasks-title-div">
+                <h3 class="body-text" id="task-title">TASK</h3>
+                <h3 class="body-text" id="total-title">TOTAL</h3>
+            </div>
+            <div id="tasks-div">
+            </div>
+            <div id="notes-total-div">
+                <h3 id="notes-title" class="body-text">NOTES</h3>
+                <p id="notes"></p>
+                <h3 id="total-title" class="body-text align-right">TOTAL AMOUNT</h3>
+                <h1 id="amount" class="align-right">$0</h1>
+                <textarea type="text" id="notes-input" maxlength="300" placeholder="Add notes here"></textarea>
+                <button type="button" id="invoice-button" onclick="resetAll()">
+                    <i class="fa-solid fa-envelope"></i>
+                    Send Invoice
+                </button>
+            </div>
         </div>
     </main>
     <script src="index.js"></script>
