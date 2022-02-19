@@ -1,5 +1,18 @@
 :root {
-    
+    --top-light: #F5F5F5;
+    --top-text-light: #2B283A;
+    --item-button-border-light: #D5D4D8;
+    --solid-text-light: #4A4E74;
+    --grey-text-light: #918E9B;
+    --invoice-button-light: #3770ED;
+    --background-dark: #1F2937;
+    --invoice-button-dark: #3A69D2;
+    --item-button-dark: #D1D4F4;
+    --item-button-text-dark: #4A4E74;
+    --solid-text-dark: #F5F5F5;
+    --grey-text-dark: #D5D4D8;
+    --page-break: #C3C6DB;
+
 }
 
 * {
