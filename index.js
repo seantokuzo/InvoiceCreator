@@ -1,15 +1,22 @@
 const services = [
     { task: "Do Your Homework", price: 10 },
     { task: "Take Your SATs", price: 20 },
-    { task: "Falsify Transcripts", price: 30 }
+    { task: "Falsify Transcripts", price: 30 },
+    { task: "Dinner Date w/ Dean", price: 40 },
+    { task: "CEO Meet n Greet", price: 50 },
+    { task: "Illuminati Initiation", price: 100 }
 ]
 const servicesDiv = document.getElementById('services-div')
 const tasksDiv = document.getElementById('tasks-div')
 const notes = document.getElementById('notes')
 const amount = document.getElementById('amount')
 let selectedTasks = []
-let userNotes = ''
-let totalAmount = 0
+
+function addNote(e) {
+    notes.innerText = e.target.value
+}
+const notesInput = document.getElementById('notes-input')
+notesInput.oninput = ((event) => addNote(event))
 
 services.map(taskObj => {
     const taskButton = document.createElement('button')
@@ -69,6 +76,13 @@ function addService(taskObj) {
         selectedTasks.push(taskObj)
         renderTasksList()
     } else return
+}
+
+function resetAll() {
+    selectedTasks = []
+    notes.innerText = ''
+    notesInput.value = ''
+    renderTasksList()
 }
 
 {/* <div class="added-task-div">

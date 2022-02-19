@@ -23,9 +23,6 @@ body {
     margin: 0;
     background-color: var(--background-dark);
     font-family: 'Inter', sans-serif;
-}
-
-main {
     color: white;
 
     display: flex;
@@ -43,16 +40,16 @@ header {
 header h1 {
     font-weight: 800;
     font-size: 40px;
-
+    
     text-align: center;
-
+    
     margin: 30px 0 0;;
 }
 
 header h4 {
     font-weight: normal;
     font-size: 16px;
-
+    
     margin: 20px 0 0;
 }
 
@@ -60,12 +57,19 @@ header p {
     font-size: 12px;
     
     margin: 10px 0 0;
+    
+}
 
+#grid-div {
+    max-width: 700px;
+
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(4, auto);
 }
 
 #services-div {
-    width: 100%;
-    max-width: 1000px;
+    grid-column: 3 / 15;
+    grid-row: 1 / 2;
     padding: 15px;
 
     display: grid;
@@ -97,29 +101,33 @@ header p {
     cursor: pointer;
 }
 
+#tasks-title-div {
+    grid-column: 3 / 15;
+    grid-row: 2 / 3;
+    
+    display: grid;
+    align-items: center;
+}
+
+#task-title {
+}
+
+#total-title {
+    text-align: right;
+}
+
 #tasks-div {
-    width: 100%;
-    min-width: 660px;
+    grid-column: 3 / 15;
+    grid-row: 3 / 4;
     min-height: 100px;
 
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 20px repeat(auto-fill, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
 
     padding: 0 0 15px 0;
 
     border-bottom: 1px solid var(--page-break);
-}
-
-#task-title {
-    grid-column: 1 / 5;
-    grid-row: 1 / 2;
-    text-align: left;
-}
-
-#total-title {
-    grid-column: 5 / 6;
-    grid-row: 1 / 2;
 }
 
 .added-task-div {
@@ -177,12 +185,12 @@ header p {
 }
 
 #notes-total-div {
-    width: 100%;
-    min-width: 660px;
+    grid-column: 3 / 15;
+    grid-row: 3 / 4;
     
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: .65fr 2fr 1.5fr 1fr;
+    grid-template-rows: .65fr 2fr auto 1fr;
     grid-row-gap: 10px;
 
     margin: 20px 0 0;
@@ -203,12 +211,14 @@ header p {
     grid-column: 1 / 5;
     grid-row: 2 / 3;
     margin: 0;
+    max-width: 100%;
     
     font-size: 12px;
     line-height: 15px;
     
     color: var(--solid-text-dark);
 
+    overflow-wrap: break-word;
     /* border: 1px solid red; */
 }
 
@@ -234,10 +244,9 @@ header p {
     /* border: 1px solid red; */
 }
 
-#text-area {
+#notes-input {
     grid-column: 1 / -1;
     grid-row: 3 / 4;
-    max-height: 80px;
 
     border: none;
 }
@@ -270,7 +279,7 @@ header p {
 
 textarea {
     border: none;
-    overflow: auto;
+    overflow: visible;
     outline: none;
 
     -webkit-box-shadow: none;
