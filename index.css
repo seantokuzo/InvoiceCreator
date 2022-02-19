@@ -93,6 +93,10 @@ header p {
     border-radius: 7px;
 }
 
+.service-button:hover {
+    cursor: pointer;
+}
+
 #tasks-div {
     width: 100%;
     min-width: 660px;
@@ -101,6 +105,8 @@ header p {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 20px repeat(auto-fill, 1fr);
+
+    padding: 0 0 15px 0;
 
     border-bottom: 1px solid var(--page-break);
 }
@@ -138,6 +144,10 @@ header p {
     color: var(--grey-text-dark);
 
     margin-left: 20px;
+}
+
+.added-task-remove:hover {
+    cursor: pointer;
 }
 
 .dollar {
