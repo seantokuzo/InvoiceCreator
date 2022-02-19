@@ -6,6 +6,7 @@ const services = [
 const servicesDiv = document.getElementById('services-div')
 const tasksDiv = document.getElementById('tasks-div')
 const notes = document.getElementById('notes')
+const amount = document.getElementById('amount')
 let selectedTasks = []
 let userNotes = ''
 let totalAmount = 0
@@ -50,6 +51,10 @@ function renderTasksList() {
         price.innerText = `${taskObj.price}`
         newDiv.appendChild(price)
     })
+    const totalAmount = selectedTasks.reduce((acc, task) => {
+        return acc + task.price
+    }, 0)
+    amount.innerText = `$${totalAmount}`
 }
 
 
@@ -60,9 +65,10 @@ function removeService(e) {
 }
 
 function addService(taskObj) {
-    selectedTasks.push(taskObj)
-    renderTasksList()
-    console.log(selectedTasks)
+    if (selectedTasks.length < 11) {
+        selectedTasks.push(taskObj)
+        renderTasksList()
+    } else return
 }
 
 {/* <div class="added-task-div">
